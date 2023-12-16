@@ -17,20 +17,22 @@ export default function AccordionItem({question, response}) {
       <div 
         id="faq" 
         className="border-t border-b py-4" 
-        onClick={handleToggle}
       >
-        <div id="faq-header" className="flex justify-between items-center cursor-pointer font-semibold">
+        <div 
+          id="faq-header" 
+          className="flex justify-between items-center cursor-pointer font-semibold transition-all"
+          onClick={handleToggle}
+        >
           <span>{question}</span>
           <img 
             src={arrowUp}
             alt="up arrow" 
             className={`${isActive ? "rotate-180" : ""}`}
-            
           />
         </div>
 
         <div className={`faq-response 
-          ${isActive ? "block text-left py-8 text-darkblue-100" : "hidden"} `}
+          ${isActive ? "block text-left py-8 text-darkblue-100 transition-all" : "hidden"} `}
         >
           {response}
         </div>
