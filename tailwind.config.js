@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "sm": "410px",
+      },
       colors: {
         softblue: {
           100: "hsl(231, 69%, 60%)",
@@ -28,4 +31,3 @@ export default {
   },
   plugins: [],
 }
-
