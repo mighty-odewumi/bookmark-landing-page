@@ -9,16 +9,14 @@ export default function Footer() {
     <>
       <footer className="bg-darkblue-100 text-white flex flex-col justify-center items-center pt-10 md:justify-between md:flex-row md:px-20 lg:px-[140px]">
         <div className="logo-link mb-12 md:flex md:flex-row md:justify-between md:items-center md:gap-10 md:mb-10">
-          <img 
-            src={logo2}
-            alt="Bookmark logo" 
-            className=""
-          />
+          <Link to="/">
+            <img src={logo2} alt="Bookmark logo" className="" />
+          </Link>
           
           <div id="foot-link" className="flex flex-col gap-4 uppercase items-center mt-8 md:flex-row md:items-center md:justify-center md:mt-0">
-            <Link to="/" className="hover:text-softred-100 transition-all">Pricing</Link>
-            <Link to="/" className="hover:text-softred-100 transition-all">Features</Link>
-            <Link to="/" className="hover:text-softred-100 transition-all">Contact</Link>
+            <Link to="/pricing" className="hover:text-softred-100 transition-all">Pricing</Link>
+            <Link to="/features" className="hover:text-softred-100 transition-all">Features</Link>
+            <Link to="/contact" className="hover:text-softred-100 transition-all">Contact</Link>
           </div>
           
         </div>
