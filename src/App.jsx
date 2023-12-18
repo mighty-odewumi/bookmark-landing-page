@@ -10,6 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { action as formAction } from "./components/Form";
+import Error from "./components/Error";
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
       path="/" 
       element={<Page />} 
       action={formAction}
+      errorElement={<Error />}
     >
       <Route index element={<SimpleBookmark />} />
       <Route path="/speedy" element={<SpeedyBookmark />} />

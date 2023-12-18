@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/bookmark-assets/logo-bookmark.svg";
 import logo2 from "../assets/bookmark-assets/logo-bookmark-2.svg";
 import hamburger from "../assets/bookmark-assets/icon-hamburger.svg";
@@ -21,8 +21,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="pt-6 pb-20 px-6 flex justify-between items-center md:mx-20 md:pt-0 md:pb-0 md:mt-[-30px] md:px-0 lg:mx-[140px]">
-        <img src={logo} alt="Bookmark logo" className="" />
+      <header className="pt-6 pb-10 px-6 flex justify-between items-center md:mx-20 md:pt-0 md:pb-0 md:mt-[-30px] md:px-0 lg:mx-[140px]">
+        <Link to="/">
+          <img src={logo} alt="Bookmark logo" className="" />
+        </Link>
 
         <img
           src={hamburger}
@@ -35,8 +37,9 @@ export default function Header() {
 
         <nav
           className={`${
-            toggleNav ? "w-full" : "hidden"
-          } h-full bg-darkblue-200 z-20 text-white fixed top-0 left-0 p-6 text-center text-xl uppercase tracking-widest transition-all md:bg-transparent md:text-darkblue-100 md:static md:flex md:px-0`}
+            toggleNav 
+              ? "w-full" 
+              : "hidden"} h-full bg-darkblue-200 z-20 text-white fixed top-0 left-0 p-6 text-center text-xl uppercase tracking-widest transition-all md:bg-transparent md:text-darkblue-100 md:static md:flex md:px-0`}
         >
           <div className="nav-header flex justify-between items-center">
             <img src={logo2} alt="Bookmark logo" className="md:hidden" />
@@ -128,4 +131,3 @@ export default function Header() {
     </>
   );
 }
-
